@@ -207,7 +207,7 @@ def show_kitchen_map():
             st.image(Image.open(MAP_IMAGE_PATH), caption='厨房の全体図', use_column_width=True)
         except FileNotFoundError:
             st.error(f"エラー: マップ画像ファイルが見つかりません: {MAP_IMAGE_PATH}")
-        st.write("ボタンを押して、それぞれの場所から見える景色を確認してください:")
+        st.write("ボタンを押すと、写真を見ることができます:")
         col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
             if st.button('タレ', key='tare_area_button'): st.session_state.current_map_view = TARE_AREA_PHOTO; st.rerun()
